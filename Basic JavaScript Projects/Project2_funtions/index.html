@@ -2,20 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <script src="JS/main.js"></script>
+        <script src="JS/main.js"></script> <!--link external JavaScript file -->
     </head>
-    <body style="background-color: azure;">
+    <body style="background-color: azure;"> <!-- Make the background color azure -->
 
         <button style="background-color:rgb(228, 185, 185);"
-        onclick="document.getElementById('demo').innerHTML=Date()">What time is it?</button>
+        onclick="document.getElementById('demo').innerHTML=Date()">What time is it?</button> <!-- create a button that calls the date and time the moment the button is clicked on, and make the background color of the button a shade of pink -->
 
-        <p id="demo"></p>
+        <p id="demo"></p> <!-- Display the date and time after the button is clicked -->
         <br>
         <button style="background-color: rgb(241, 198, 205);"
-         onclick="document.body.style.backgroundColor = 'lightpink';">Turn the page Light Pink!</button>
+         onclick="document.body.style.backgroundColor = 'lightpink';">Turn the page Light Pink!</button> <!-- Create a button that turns the background color of the page a shade of pink instead of azure -->
         <br>
         <br>
-        <p id="Concatenate" onclick="shaysFunction()">Click This Button!!</p>
+        <p id="Concatenate" onclick="shaysFunction()">Click This Button!!</p> <!-- Call and display a funtion from the external JavaScript file -->
 
     </body>
 </html>
