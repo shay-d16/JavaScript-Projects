@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8"> <!--Assign UTF-8 as the character set-->
         <script src="JS/main.js"></script>
+        <style>
+            button {
+                background-color: pink;
+            }
+        </style>
     </head>
     <body>
         <h1 style="color:palevioletred">Let's Do Some Math!</h1>
@@ -19,8 +24,20 @@
         <p id="Multiplying"></p> <!--Display operation and return value -->
         <br>
 
-        <button onlick="division()">DIVIDE</button> <!--Call 'division()' function to divide two numbers -->
+        <button onclick="division()">DIVIDE</button> <!--Call 'division()' function to divide two numbers -->
         <p id="Dividing"></p>
         <br>
+
+        <button onclick="more_Math()">MULTIPLE OPERATIONS</button>
+        <p id="More Math"></p>
+        <br>
+
+        <button onclick="modulus_Operator()">MODULUS OPERATOR</button>
+        <p id="Remainder"></p>
+        <br>
+
+        <button onclick="negation_Operation()">NEGATION OPERATION</button>
+        <p id="Negation"></p>
+
     </body>
 </html>

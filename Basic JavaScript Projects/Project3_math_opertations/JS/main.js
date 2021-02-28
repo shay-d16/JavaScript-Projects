@@ -17,3 +17,18 @@ function division() { //Create a funciton that divides two numbers
     var simple_Math = 48 / 6; //Set the return value
     document.getElementById("Dividing").innerHTML = "48 / 6 = " + simple_Math;
 } 
+
+function more_Math() { //Create function that can do multiple operations in one variable
+var simple_Math = (1 + 2) * 10 / 2 - 5; //Set the variable as the return value of this formula
+document. getElementById("More Math").innerHTML = "1 plus 2, multiplied by 10, divided in half and then subtracted by 5 equals " + simple_Math; //Display a text description of the formula and its return value
+}
+
+function modulus_Operator() { //Create an operation that displays the remainder of two divided numbers
+    var simple_Math = 25 % 6; //Set the variable as the return value (remainder)
+    document.getElementById("Remainder").innerHTML = "When you divide 25 by 6 you have a remainder of: " + simple_Math; //Call the function and return value to the HTML file
+}
+
+function negation_Operation() { //Create a function that returns the opposite or negative form of a variable
+    var X = 10; //Set the variable X to 10
+    document.getElementById("Negation").innerHTML = -X; //Call the function and return value (-10) to the HTML file
+}
