@@ -1,3 +1,7 @@
+
+
+
+
 function addition_Function() { //Create a new function called addition_Function
     var addition = 2 + 2; //Set addition variable to 2 + 2
     document.getElementById("Adding").innerHTML = "2 + 2 = " + addition; // Call the Addition return value to the HTML file
@@ -32,3 +36,13 @@ function negation_Operation() { //Create a function that returns the opposite or
     var X = 10; //Set the variable X to 10
     document.getElementById("Negation").innerHTML = -X; //Call the function and return value (-10) to the HTML file
 }
+
+var S = 5; // Set the variable 'S' to 5
+S++; //Use the increment operator to increase the value of 'S' by 1, the return value being 6
+document.write(S); //Print the return value 6 on the .html document
+
+document.write("<br>"); //Create a line break between variables 'S' and 'M'
+
+var M = 5.25; //Set the variable 'M' to 5.25
+M--; //Use the decrement operator to reduce 5.25 by 1, the return value being 4.25
+document.write(M); //Print return value 4.25 on the .html document
