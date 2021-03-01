@@ -1,15 +1,5 @@
 window.alert(Math.random() * 100); //Create a window alert that displays a random number between 0 and 100
 
-var S = 5; // Set the variable 'S' to 5
-S++; //Use the increment operator to increase the value of 'S' by 1, the return value being 6
-document.write(S); //Print the return value 6 on the .html document
-
-document.write("<br>"); //Create a line break between variables 'S' and 'M'
-
-var M = 5.25; //Set the variable 'M' to 5.25
-M--; //Use the decrement operator to reduce 5.25 by 1, the return value being 4.25
-document.write(M); //Print return value 4.25 on the .html document
-
 
 function addition_Function() { //Create a new function called addition_Function
     var addition = 2 + 2; //Set addition variable to 2 + 2
@@ -45,6 +35,18 @@ function negation_Operation() { //Create a function that returns the opposite or
     var X = 10; //Set the variable X to 10
     document.getElementById("Negation").innerHTML = -X; //Call the function and return value (-10) to the HTML file
 }
+
+function increment_Operator() { //Create function to increase an integer
+    var S = 5; // Set the variable 'S' to 5
+    S++; //Increase S by 1
+    document.getElementById("Increment").innerHTML = "5 increased by 1 = " + S++; //Call the function and the return value 6 on the .html document
+    }
+    
+    function decrement_Operator() { //Create a function to decrease an integer
+    var M = 5.25; //Set the variable 'M' to 5.25
+    M--; //Decrease M by 1
+    document.getElementById("Decrement").innerHTML = "5.25 reduced by 1 = " + M--; //call the function and return the decrement value 4.25 on the .html document
+    }
 
 document.getElementById("Power").innerHTML = Math.pow(8,2); //returns 64
 
