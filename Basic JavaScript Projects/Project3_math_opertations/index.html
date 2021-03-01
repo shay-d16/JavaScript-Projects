@@ -2,15 +2,16 @@
 <html lang="en"> <!--Set language to English-->
     <head>
         <meta charset="UTF-8"> <!--Assign UTF-8 as the character set-->
-        <script src="JS/main.js"></script>
+        <title>JavaScript Math Operations</title>
+        <script src="JS/main.js"></script> <!--Link external JavaScript file-->
         <style>
             button {
                 background-color: pink;
             }
-        </style>
+        </style> <!--Style the buttons to be pink -->
     </head>
     <body>
-        <h1 style="color:palevioletred">Let's Do Some Math!</h1>
+        <h1 style="color:palevioletred">Let's Do Some Math!</h1> <!--Give the buttons a heading-->
 
         <button onclick="addition_Function()">ADD</button> <!--Give id "Math" and event handler to call JavaScript function-->
         <p id="Adding"></p> <!--Create paragraph element with the id "Add"-->
@@ -28,16 +29,30 @@
         <p id="Dividing"></p>
         <br>
 
-        <button onclick="more_Math()">MULTIPLE OPERATIONS</button>
-        <p id="More Math"></p>
+        <button onclick="more_Math()">MULTIPLE OPERATIONS</button> <!--Use a button event handler to Call 'more_Math()' function -->
+        <p id="More Math"></p> <!--Set this id as 'More Math' for the getElementById() method-->
         <br>
 
-        <button onclick="modulus_Operator()">MODULUS OPERATOR</button>
+        <button onclick="modulus_Operator()">MODULUS OPERATOR</button> <!-- -->
         <p id="Remainder"></p>
         <br>
 
-        <button onclick="negation_Operation()">NEGATION OPERATION</button>
-        <p id="Negation"></p>
+        <button onclick="negation_Operation()">NEGATION OPERATION</button> <!--Call 'negation_Operation' and return its value-->
+        <p id="Negation"></p> <!--Display the return value-->
+        <br>
+
+        <p id="Power"></p> <!--Set this paragraph's id to 'Power'-->
+
+        <script>
+            document.getElementById("Power").innerHTML = Math.pow(8,2);
+        </script> <!--Add script to return and display the value of 8 to the 2nd power-->
+        <br>
+        
+        <p id="Round"></p> <!--Set this paragraph's id to 'Round'-->
+
+        <script>
+            document.getElementById("Round").innerHTML = Math.round(84.647);
+        </script> <!--Add script to round 84.647 to the nearest tenth, and display that return value-->
 
     </body>
 </html>
