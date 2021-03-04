@@ -61,6 +61,7 @@ document.write("62 is less than 46 OR 62 is greater than 67: ");
 document.write(62 < 46 || 62 > 67); //Utilize OR operator to return 'false'
 document.write("<br><br><br>"); //Line breaks
 
+
 //TYPEOF OPERATOR
 document.write("<h3><u>Typeof Operator</u></h3>"); //Underlined heading
 
@@ -89,6 +90,15 @@ function isNaN_function1() { //Create a function to ask the computer if it is tr
 function isNaN_function2() { //Create a function to ask the computer if it is true or false that "Shay was here!" is NOT a number
     document.getElementById("isNaN Test2").innerHTML = isNaN("Shay was here!"); //Diplay return value in the .html file
 } //Return value: true
+
+//NOT OPERATOR
+function not_Function() { //Create function for NOT operator
+    document.getElementById("Not").innerHTML = !(6 > 8); //Utilize the NOT operator to return and display 'true'
+}
+
+function not_Function2() { //Create function for NOT operator
+    document.getElementById("Not2").innerHTML = !(10 == 10); //Utilize the NOT operator to return and display 'false'
+}
 
 //CONSOLE LOG FUNCTION
 console.log(12 * 10); //Perform a math operation with the console.log() function
