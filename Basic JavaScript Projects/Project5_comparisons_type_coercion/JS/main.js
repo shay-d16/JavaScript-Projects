@@ -41,8 +41,27 @@ var f = "Duck"; //Assign variable 'f' as a string data type
 var g = "Ducks"; //Assign variable 'g' as a string data type
 document.write("\"Duck\" and \"Ducks\" have the same data type and value: ");
 document.write(f === g); //Return 'false' by writing the same data type but a different value for both
+document.write("<br><br><br>"); //Line breaks
 
-//TYPEOF FUNCTION
+//AND OPERATOR
+document.write("16 is equal to 16 AND 21 is greater than 17: ")
+document.write(16 == 16 && 21 > 17); //Utilize AND operator to return 'true'
+document.write("<br><br><br>"); //Line breaks
+
+document.write("200 is less than 100 AND 314 is greater than 214: ")
+document.write(200 < 100 && 314 > 214); //Utilize AND operator to return 'false'
+document.write("<br><br><br>"); //Line breaks
+
+//OR OPERATOR
+document.write("50 is equal to 50 OR 50 is less than 51: ");
+document.write(50 == 50 || 50 > 51); //Utilize OR operator to return 'true'
+document.write("<br><br><br>"); //Line breaks
+
+document.write("62 is less than 46 OR 62 is greater than 67: ");
+document.write(62 < 46 || 62 > 67); //Utilize OR operator to return 'false'
+document.write("<br><br><br>"); //Line breaks
+
+//TYPEOF OPERATOR
 document.write("<h3><u>Typeof Operator</u></h3>"); //Underlined heading
 
 document.write("What data type is \"heartbeat\": ");
