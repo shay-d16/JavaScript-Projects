@@ -1,4 +1,5 @@
 //GLOBAL VARIABLE
+document.write("<h3><u>Global and Local Variables</u></h3>")
 var m = 8; //The variable is located outside of the function, making it a global variable
 function Multiply_numbers_1() { //Create a function to multiply numbers
     document.write(m * 100 + "<br>"); 
@@ -21,16 +22,16 @@ Divide_numbers_1(); //Display result
 Divide_numbers_2(); //Does not display anything because 'n' hasn't yet been defined in this function
 
 //IF AND ELSE STATEMENTS
-function get_Date() {
-    var b = new Date();
-    if( b.getHours() < 18) {
-        document.getElementById("GetHours").innerHTML = "How is your day going so far?";
-        document.body.style.backgroundColor = "#f3c7cd";
+function get_Date() { //Create a function for constional statements
+    var b = new Date(); //Assign variable 'b' as a new Date object
+    if( b.getHours() < 18) { //Condition: if the hour in you time zone is less than 18 display these functions
+        document.getElementById("GetHours").innerHTML = "How is your day going so far?"; //If Condtion is true, print this string to the HTML file
+        document.body.style.backgroundColor = "#f3c7cd"; //Also, change the background color of the page to a light shade of pink
     }
-    else {
-        document.getElementById("GetHours").innerHTML = "How are you feeling tonight?";
-        document.body.style.backgroundColor = "paleredviolet";
-        document.body.style.color = "#fff";
+    else { //Condition: The hour is not less than 18, display these returns instead
+        document.getElementById("GetHours").innerHTML = "How are you feeling tonight?"; //Condition is false, dislay this string
+        document.body.style.backgroundColor = "paleredviolet"; //Also change the background color to palevioletred
+        document.body.style.color = "#fff"; //Lastly, change the text color to white
     }
 }
 
