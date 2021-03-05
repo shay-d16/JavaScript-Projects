@@ -19,3 +19,18 @@ function Divide_numbers_2() { //Second function, but without an assigned variabl
 }
 Divide_numbers_1(); //Display result
 Divide_numbers_2(); //Does not display anything because 'n' hasn't yet been defined in this function
+
+//IF AND ELSE STATEMENTS
+function get_Date() {
+    var b = new Date();
+    if( b.getHours() < 18) {
+        document.getElementById("GetHours").innerHTML = "How is your day going so far?";
+        document.body.style.backgroundColor = "#f3c7cd";
+    }
+    else {
+        document.getElementById("GetHours").innerHTML = "How are you feeling tonight?";
+        document.body.style.backgroundColor = "paleredviolet";
+        document.body.style.color = "#fff";
+    }
+}
+
