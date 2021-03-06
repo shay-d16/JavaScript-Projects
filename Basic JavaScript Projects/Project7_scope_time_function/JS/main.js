@@ -17,21 +17,30 @@ function Divide_numbers_1() { //Create a function for dividing numbers
 }
 function Divide_numbers_2() { //Second function, but without an assigned variable
     document.write(n / 2);
+    console.log(n / 2);
 }
 Divide_numbers_1(); //Display result
 Divide_numbers_2(); //Does not display anything because 'n' hasn't yet been defined in this function
 
 //IF AND ELSE STATEMENTS
-function get_Date() { //Create a function for constional statements
-    var b = new Date(); //Assign variable 'b' as a new Date object
-    if( b.getHours() < 18) { //Condition: if the hour in you time zone is less than 18 display these functions
-        document.getElementById("GetHours").innerHTML = "How is your day going so far?"; //If Condtion is true, print this string to the HTML file
-        document.body.style.backgroundColor = "#f3c7cd"; //Also, change the background color of the page to a light shade of pink
+function Time_function() { //Create a function for constional statements
+    var Time = new Date().getHours(); //Assign variable 'Time' as a new Date object
+    if( Time < 12 == Time > 0) { //Condition: if the hour in you time zone is less than 12 and greater than 0, execute function
+        document.getElementById("Time_of_day").innerHTML = "I hope you are having a wonderful morning, "
+        + document.getElementById("firstName").value + "!"; //Print this string plus the input value to the HTML file
+        document.body.style.backgroundColor = "#f1d1d6"; //Also, change the background color of the page to a light shade of pink
     }
-    else { //Condition: The hour is not less than 18, display these returns instead
-        document.getElementById("GetHours").innerHTML = "How are you feeling tonight?"; //Condition is false, dislay this string
-        document.body.style.backgroundColor = "paleredviolet"; //Also change the background color to palevioletred
-        document.body.style.color = "#fff"; //Lastly, change the text color to white
+    else if (Time >= 12 == Time < 18) { //Condition: If the hour is greater than or equal to 12 and less than 18, display these returns instead
+        document.getElementById("Time_of_day").innerHTML = "I hope you are having a splendid afternoon, "
+        + document.getElementById("firstName").value + "!"; //Condition true, dislay this string and the input value
+        document.body.style.backgroundColor = "#f3c7cd"; //Also change the background color
+    }
+    else { //Condition false, execute this function
+        document.getElementById("Time_of_day").innerHTML = "I hope you enjoy the rest of your evening, " 
+        + document.getElementById("firstName").value + "!"; //Print this to the HTML file
+        document.body.style.backgroundColor = "#d87093"; //Change the background color
     }
 }
+
+
 
