@@ -11,12 +11,19 @@ function countdown() {
         }
     tick();
 }
-
+ 
+//SLIDESHOW
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSides(n) {
-    showSlides(slideIndex = n);
+/* NEXT/PREVIOUS CONTROLS */
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+/* THUMBNAIL IMAGE CONTROLS */
+function currentSlide(n) {
+    showSlides(slideIndex = n)
 }
 
 function showSlides(n) {
