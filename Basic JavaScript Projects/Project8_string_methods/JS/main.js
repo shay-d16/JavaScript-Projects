@@ -18,11 +18,23 @@ function slice_Method() { //Create a function that utilizes the slice() method
 }
 
 //UPPERCASE() METHOD
-function uppercase_Method() { //Converts a string to uppercase letters
-    var str = "Pancakes are delicious!!"; //Assign variable 'str' to the string 'Pancakes are delicious!'
+function uppercase_Method() { //Create a function that utilizes the toUpperCase() method
+    var str = "Pancakes are delicious!!"; //Assign local variable 'str' to the string 'Pancakes are delicious!'
     var res = str.toUpperCase(); /*Use toUpperCase() method on the 'str' value, then set the value of this
      method equal to the value of the variable 'res' */
     document.getElementById("UpperCase").innerHTML = res; //Print 'res' value to the element id 'UpperCase' on the HTML file
 }
 
 //SEARCH() METHOD
+function search_Method(){ //Create a function that utilizes the search() method
+    var str = "Not the gumdrop buttons!!"; //Assign local variable 'str' as this string
+    var h = str.search("gumdrop"); /*The search() method searches for a specified value,
+    and returns the position of the match */
+    document.getElementById("Search").innerHTML = h; //Display the position of the specified value
+}
+
+//NUMBER METHODS
+function string_Method() { //Create a function that utilizes the toString() method
+    var m = 2395; //Assign variable 'm' to the number 2395
+    document.getElementById("Numbers").innerHTML = m.toString(); // Use the toString() method to return the number as a string
+}
