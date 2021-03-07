@@ -3,43 +3,76 @@
     <head>
         <meta charset="UTF-8">
         <title>String Methods</title>
-        <script src="JS/main.js"></script>
+        <script src="JS/main.js"></script> <!--Link the external JavaScrip file to this file-->
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h3 {
+                color:palevioletred;
+            }
+            button {
+                background-color:rgb(252, 200, 208);
+                color:rgb(104, 30, 54);
+            }
+        </style>
     </head>
     <body>
         <!--CONCAT() METHOD-->
-        <h3><u>Concat() Method</u></h3> <!--This method concatenates two or more strings-->
+        <h3>Concat() Method</h3> <!--This method concatenates two or more strings-->
         <button onclick="full_Sentence()">Click here!</button> <!--Create a button to call the full_Sentence() function to this file-->
         <p id="Concatenate"></p> <!--Assign this element's ID as Concatenate-->
         <br> <!--Line break-->
         <!--END CONCAT() METHOD-->
 
         <!--SLICE() METHOD-->
-        <h3><u>Slice() Method</u></h3> <!--This method is a string method that extracts a setion of a string and returns the extracted section in a new string-->
+        <h3>Slice() Method</h3> <!--This method is a string method that extracts a setion of a string and returns the extracted section in a new string-->
         <button onclick="slice_Method()">Click here!</button> <!--Create a button that calls this JavaScript funciton to this element-->
         <p id="Slice"></p> <!--Display the return value of this JavaScript function-->
         <br> <!--Line break-->
         <!--END SLICE() METHOD-->
 
         <!--TOUPPERCASE() METHOD-->
-        <h3><u>toUppercase() Method</u></h3> <!--This method converts a string to uppercase letters-->
+        <h3>ToUppercase() Method</h3> <!--This method converts a string to uppercase letters-->
         <button onclick="uppercase_Method()">Click here!</button> <!--Create a button that calls this JavaScript funciton to this element-->
         <p id="UpperCase"></p> <!--Display the return value of this JavaScript function-->
         <br><!--Line break-->
         <!--END TOUPPERCASE() METHOD-->
 
         <!--SEARCH() METHOD-->
-        <h3><u>Search() Method</u></h3> <!--This method searches for a specified value and returns the position of the match-->
+        <h3>Search() Method</h3> <!--This method searches for a specified value and returns the position of the match-->
         <button onclick="search_Method()">Click here!</button> <!--Create a button that calls this JavaScript funciton to this element-->
         <p id="Search"></p> <!--Display the return value of this JavaScript function-->
         <br> <!--Line break-->
         <!--END SEARCH() METHOD-->
 
-        <!--NUMBER METHODS-->
-        <h3><u>Number Methods</u></h3>
+        <!--TOSTRING() METHOD-->
+        <h3>ToString() Method</h3> <!--This method returns a number as a string-->
         <button onclick="string_Method()">Click here!</button> <!--Create a button that calls this JavaScript funciton to this element-->
         <p id="Numbers"></p> <!--Display the return value of this JavaScript function-->
         <br> <!--Line break-->
-        <!--END NUMBER METHODS-->
+        <!--END TOSTRING() METHOD-->
+
+        <!--TOPRECISION() METHOD-->
+        <h3>ToPrecision() Method</h3> <!--This method formats a number to a specified length-->
+        <button onclick="precision_Method()">Click here!</button> <!--Create a button that calls this JavaScript funciton to this element-->
+        <p id="Precision"></p> <!--Display the return value of this JavaScript function-->
+        <br> <!--Line break-->
+        <!--END TOPRECISION() METHOD-->
+        
+        <!--TOFIXED() METHOD-->
+        <h3>ToFixed() Method</h3> <!--This method converts a number into a string, rounding the number to keep only two decimals-->
+        <button onclick="toFixed_Method()">Click here!</button> <!--Create a button that calls this JavaScript funciton to this element-->
+        <p id="To Fixed"></p> <!--Display the return value of this JavaScript function-->
+        <br> <!--Line break-->
+        <!--END TOFIXED() METHOD-->
+
+        <!--VALUEOF() METHOD-->
+        <h3>ValueOf() Method</h3> <!--This method returns the primitive value of a number-->
+        <button onclick="valueOf_Method()">Click here!</button> <!--Create a button that calls this JavaScript funciton to this element-->
+        <p id="Value Of"></p> <!--Display the return value of this JavaScript function-->
+        <!--END VALUEOF() METHOD-->
 
     </body>
 </html>

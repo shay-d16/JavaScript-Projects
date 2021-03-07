@@ -33,8 +33,28 @@ function search_Method(){ //Create a function that utilizes the search() method
     document.getElementById("Search").innerHTML = h; //Display the position of the specified value
 }
 
-//NUMBER METHODS
+//TOSTRING() METHOD
 function string_Method() { //Create a function that utilizes the toString() method
     var m = 2395; //Assign variable 'm' to the number 2395
     document.getElementById("Numbers").innerHTML = m.toString(); // Use the toString() method to return the number as a string
+}
+
+//TOPRECISION() METHOD
+function precision_Method() { //Create a function that utilizes the toPrecision() method
+    var q = 7539296.8907789655345675091634; //Assign the variable 'q'
+    document.getElementById("Precision").innerHTML = q.toPrecision(10); //The toPrecision() method formats a number to a specified length
+}
+
+//TOFIXED() METHOD
+function toFixed_Method() { //Create a function that utilizes the toFixed() method
+    var num = 907.5380563; //Assign the variable 'num' equal to the number
+    var n = num.toFixed(2); //Use toFixed() method to convert a number into a string, rounding the number to keep only two decimals
+    document.getElementById("To Fixed").innerHTML = n; //Print return value to HTML file
+}
+
+//VALUEOF() METHOD
+function valueOf_Method() { //Create a function that utlizes the valueOf() method
+    var num = 167; //Assign the variable 'y' equal to the number 167
+    var y = num.valueOf(); //Use the valueOf() method to display the primitive value of a number
+    document.getElementById("Value Of").innerHTML = y; //Print the return value to the HTML file
 }
