@@ -1,0 +1,1 @@
+alert(document.getElementById("p1").innerHTML); //Create an alert that prints the 'p1' ID
