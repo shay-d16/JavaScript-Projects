@@ -19,3 +19,10 @@ function for_Loop() {
     }
     document.getElementById("List_of_Instruments").innerHTML = Content;
 }
+
+//STRING LENGTH
+function string_Length_Function() {
+    var str = "If you\'re a bird, I\'m a bird.";
+    var nb = str.length;
+    document.getElementById("String_length").innerHTML = nb;
+}
