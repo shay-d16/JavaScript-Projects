@@ -51,3 +51,12 @@ function array_Function() {
     document.getElementById("Array").innerHTML = "Today I am feeling " + Emotions[0] +
         ", " + Emotions[6] + ", and " + Emotions[5] + "!";
 }
+
+//CONST KEYWORD
+function constant_function() {
+    const Pokemon = {name:"Sylveon", generation:"VI", abilities:"Cute Charm and Pixelate"};
+    Pokemon.type = "Fairy-type";
+    Pokemon.species = "Eevee";
+    document.getElementById("Constant").innerHTML = Pokemon.name + " is my favoite " +
+        Pokemon.type + " poke&#769mon! It is an evolved " + Pokemon.species + "!";
+}
