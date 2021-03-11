@@ -60,3 +60,13 @@ function constant_function() {
     document.getElementById("Constant").innerHTML = Pokemon.name + " is my favoite " +
         Pokemon.type + " poke&#769mon! It is an evolved " + Pokemon.species + "!";
 }
+
+//LET KEYWORD
+function let_function() {
+    var 
+}
+
+//RETURN STATEMENT
+function return_statement_function() {
+    var 
+}
