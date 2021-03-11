@@ -1,23 +1,23 @@
 //WHILE LOOP
-function counting_To_Ten() {
+function counting_down() {
     var Digit = "";
-    var X = 1;
-    while (X < 11) {
+    var X = 10;
+    while (X > 0) {
         Digit += "<br>" + X;
-        X++; //Use the increment operator (++) to add on in JavaScript
+        X--; //Use the decrement operator (--) to subtract one from the variable
     }
-    document.getElementById("Counting_to_Ten").innerHTML = Digit;
+    document.getElementById("Counting_down").innerHTML = Digit;
 }
 
 //FOR LOOP
-var Instruments = ["Guitar", "Drums", "Piano", "Bass", "Violin", "Trumpet", "Flute"];
+var Sailor_scouts = ["Sailor Moon", "Sailor Mercury", "Sailor Mars", "Sailor Jupiter", "Sailor Venus", "Sailor Uranus", "Sailor Neptune", "Sailor Pluto"];
 var Content = "";
 var Y;
 function for_Loop() {
-    for (Y = 0; Y < Instruments.length; Y++) {
-        Content += Instruments[Y] + "<br>";
+    for (Y = 0; Y < Sailor_scouts.length; Y++) {
+        Content += Sailor_scouts[Y] + "<br>";
     }
-    document.getElementById("List_of_Instruments").innerHTML = Content;
+    document.getElementById("List_of_Sailor_scouts").innerHTML = Content;
 }
 
 //STRING LENGTH
@@ -53,7 +53,7 @@ function array_Function() {
 }
 
 //CONST KEYWORD
-function constant_function() {
+function constant_function() { //The const keyword creates a constant
     const Pokemon = {name:"Sylveon", generation:"VI", abilities:"Cute Charm and Pixelate"};
     Pokemon.type = "Fairy-type";
     Pokemon.species = "Eevee";
@@ -62,11 +62,19 @@ function constant_function() {
 }
 
 //LET KEYWORD
-function let_function() {
-    var 
+function let_function() { // The let keyword declares variables that can have block scope
+    var j = "MIND";
+    document.write(j);
+    {
+        let j = "OVER"; //In this block scope, j is equal to a different string
+        document.write("<br>" + j);
+    }
+    var k = "MATTER";
+    document.write("<br>" + k);
 }
 
 //RETURN STATEMENT
-function return_statement_function() {
-    var 
+function return_function(name) {
+    return "How are you feeling tonight, " + name;
 }
+document.getElementById("Return").innerHTML = return_function("Shay") + "?";
