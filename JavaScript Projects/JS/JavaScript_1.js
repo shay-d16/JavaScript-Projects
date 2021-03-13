@@ -68,3 +68,12 @@ function Pokemon_type_Function() { //Create a funciton that utilizes the switch 
     document.getElementById("Output").innerHTML = Type_Output;
 
 }
+
+//GRADIENT COLOR
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d"); //The getContext() method returns a drawing context on the canvas
+var my_gradient = ctx.createLinearGradient(0, 0, 200, 0); //This method creates a linear gradient object
+my_gradient.addColorStop(0, "red"); //This method specifies the colors and position in a gradient object
+my_gradient.addColorStop(1, "white");
+ctx.fillStyle = my_gradient; //fillStyle sets or returns the color, gradient, or pattern to fill the drawing
+ctx.fillRect(10, 10, 150, 80); //This method draws a "filled" rectangle
