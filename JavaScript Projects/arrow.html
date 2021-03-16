@@ -7,14 +7,15 @@
     </head>
     <body>
 
+        <p id="displayArrow"></p>
+
         <script>
             var arrowFunction;
             arrowFunction = (val) => "This is my arrow function! " + val;
-                document.getElementById("displayArrow").innerhtml = arrowFunction("It's a work in progress...");
-                       
+                document.getElementById("displayArrow").innerHTML = arrowFunction("It's a work in progress...");
+            
+            
         </script>
-
-        <p id="displayArrow"></p>
 
     </body>
 </html>
