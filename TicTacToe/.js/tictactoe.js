@@ -1,3 +1,5 @@
+// ------------------------------- PART FOUR ------------------------------------
+
 //This variable keeps track of whose turn it is
 let activePlayer = 'X';
 //This array stores an array of moves. Use this to determine win conditions
@@ -14,11 +16,11 @@ function placeXOrO(squareNumber) {
         //This condition checks whose turn it is
         if(activePlayer === 'X') {
             //If active player is equal to 'X', the x.png is placed in HTML.
-            select.style.backgroundImage = 'url("TicTacToe/images/x.png")';
+            select.style.backgroundImage = 'url("./images/x.png")';
             //Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
         } else {
             //If active player is equal to 'O', the o.png is placed in HTML
-            select.style.backgroundImage = 'url(TicTacToe/images/o.png)';
+            select.style.backgroundImage = 'url(./images/o.png)';
         }
         //squareNumber and activePlayer are concatenated together and added to the array
         selectedSquares.push(squareNumber + activePlayer);
@@ -66,6 +68,8 @@ function placeXOrO(squareNumber) {
         }
     }
 }
+
+//------------------------------------ PART FIVE ------------------------------------------
 
 //This function parses the selectedSquares array to search for win conditions.
 //drawWinline function is called to draw line if condition is met.
@@ -124,12 +128,14 @@ function checkWinConditions() {
     }
 }
 
+//------------------------------------ PART SIX --------------------------------------
+
 //This function makes the body element temporarily unclickable
 function disableClick() {
     //This makes the body unclickable
     body.style.pointerEvents = 'none';
     //This makes the body clickable again after 1 second.
-    setTimeout(function() {body.style. pointerEvents = 'auto';}, 1000);
+    setTimeout(function() {body.style.pointerEvents = 'auto';}, 1000);
 }
 
 //This function takes a string parameter of the path set earlier for 
@@ -140,10 +146,12 @@ let audio = new Audio(audioURL);
 audio.play() ;
 }
 
+//----------------------------------- PART SEVEN ---------------------------------------------
+
 //This function utilizes html cavas to draw win lines
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line accesses the html canvas element.
-    const canvas - document.getElementById('win-lines')
+    const canvas = document.getElementById('win-lines')
     //This line gives access to methods and properties to use on canvas.
     const c = canvas.getContext('2d');
     //This line indicate where the start of a line's x axis is.
@@ -158,4 +166,74 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         x = x1,
         //This variable stores the temporary y axis data that is updated in he animation loop.
         y = y1;
+
+    //This functiopn interacts with the canvas
+    function animateLineDrawing() {
+        //This variable creates a loop.
+        const animationLoop = requestAnimationFrame(animateLineDrawing)
+        //This method clears content from last loop iteration
+        c.clearReact(0, 0, 608, 608)
+        //This method starts a new path
+        c.beginPath();
+        //This method moves you to a starting point for your line
+        c.moveTo(x1, y1)
+        //This method indicates the end point of the line
+        c.lineTo(x, y)
+        //This method sets the width of the line
+        c.lineWidth = 10;
+        //This method sets the color of the line
+        c.strokeStyle = 'rgba(70, 255, 33, .8)';
+        //This method draws out everything laid out above
+        c.stroke();
+        //This condtion checks if you've already reached the endpoint
+        if(x1 <= x2 && y1 <= y2) {
+            //This condition adds 10 to the previous x point
+            if(x < x2) { x += 10; }
+            //This condition adds 10 to the previous y point
+            if(y < y2) { y += 10; }
+            //This condition cancels the animation loop
+            //if the en point is reached
+            if(x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
+
+        }
+        //This condition is similar to the one above 
+        //This is necessary for the 6, 4, 2 win conditions
+        if(x1 <= x2 && y1 >= y2) {
+            if(x < x2) { x += 10; }
+            if(y > y2) { y -= 10; }
+            if(x >= x2 && y <= y2) {cancelAnimationFrame(animationLoop); }
+        }
+    }
+
+    //This function clears out the canvas after the win line is drawn
+    function clear() {
+        //This line starts the animation loop
+        const animationLoop = requestAnimationFrame(clear);
+        //This line clears the canvas
+        c.clearReact(0, 0, 608, 608);
+        //This line stops the animation loop
+        cancelAnimationFrame(animationLoop);
+    }
+    //This line disallows clicking while the win sound is playing
+    disableClick();
+    //This line plays the win sounds
+    audio('./media/winGame.png');
+    //This line waits 1 second. Then, clears canvas, resets game, and allowa clicking again
+    setTimeout(function () { clear(); resetGame(); }, 1000);
 }
+
+//----------------------------------- PART EIGHT -------------------------------------------
+
+//This functionresets the game in the event of a tie or a win
+function resetGame() {
+    //This for loop iterates through each HTML square element
+    for (let i = 0; i < 9; i++) {
+        //This variable gets the html elemnt of i
+        let square = document.getElementById(String(i))
+        //This removes elements backgoundImage
+        square.style.backgroundImage = ''
+    }
+    //This resets the array so it is empty and you can start over
+    selectedSquares = [];
+}
+
