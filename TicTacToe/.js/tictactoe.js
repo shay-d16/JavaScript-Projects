@@ -172,7 +172,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This variable creates a loop.
         const animationLoop = requestAnimationFrame(animateLineDrawing)
         //This method clears content from last loop iteration
-        c.clearReact(0, 0, 608, 608)
+        c.clearRect(0, 0, 608, 608)
         //This method starts a new path
         c.beginPath();
         //This method moves you to a starting point for your line
@@ -210,7 +210,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This line starts the animation loop
         const animationLoop = requestAnimationFrame(clear);
         //This line clears the canvas
-        c.clearReact(0, 0, 608, 608);
+        c.clearRect(0, 0, 608, 608);
         //This line stops the animation loop
         cancelAnimationFrame(animationLoop);
     }
@@ -218,6 +218,8 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     disableClick();
     //This line plays the win sounds
     audio('./media/winGame.png');
+    //This line calls the main animation loop
+    animateLineDrawing();
     //This line waits 1 second. Then, clears canvas, resets game, and allowa clicking again
     setTimeout(function () { clear(); resetGame(); }, 1000);
 }
