@@ -114,6 +114,12 @@ keys.addEventListener('click', (event) => {
         Update_Display();
             return;
     }
+    //Ensures that AC clears the numbers from the Calculator
+    if (target.classList.contains('all-clear')) {
+        Calculator_Reset();
+        Update_Display();
+        return;
+    }
 
     Input_Digit(target.value);
     Update_Display();
