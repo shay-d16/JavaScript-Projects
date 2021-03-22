@@ -1,12 +1,13 @@
+//---------------------------------- PLACE ORDER BTN FUNCTION ----------------------------------------------
 function getReceipt() {
     //This initializes the string so it can get passed from 
     //function to function, growing line y line into a full receipt
     var text1 = "<h3>You Ordered:</h3>";
     var runningTotal = 0;
     var sizeTotal = 0;
-    var sizeArray = document.getElementsByClassName("size");
+    var sizeArray = document.getElementsByClassName("size"); //refers to the 'size' class in the html file
     for (var i = 0; i < sizeArray.length; i++) {
-        if (sizeArray[i].checked) {
+        if (sizeArray[i].checked) { // the checked property sets or returns the checked state of a checkbox
             var selectedSize = sizeArray[i].value; 
             text1 = text1+selectedSize+"<br>";
         }
@@ -30,6 +31,7 @@ function getReceipt() {
     getTopping(runningTotal,text1);
 };
 
+//--------------------------- GETTOPPING() FUNCTION ----------------------------------
 function getTopping(runningTotal,text1) {
     var toppingTotal = 0;
     var selectedTopping = [];
@@ -42,11 +44,14 @@ function getTopping(runningTotal,text1) {
         }
     }
     var toppingCount = selectedTopping.length;
+    //Use if statement to set the discount 'one topping free' by subtracting one from the toppingCount
     if (toppingCount > 1) {
         toppingTotal = (toppingCount - 1);
     } else {
         toppingTotal = 0;
     }
+
+//-------------------------------   RUNNINGTOTAL CONSOLE LOG ---------------------------------------
     runningTotal = (runningTotal + toppingTotal);
     console.log("total selected topping items: "+toppingCount);
     console.log(toppingCount+" topping - 1 free topping = "+"$"+toppingTotal+".00");
