@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <script>
+        //Use $ to target elements in jQuery
+        $(document).ready(function() {
+            $("html").append(  /*append() method inserts content, spefified byt the parameter,
+                to the end of each element in the set of matched elements. */
+                /* Note: The backslash '\' tells the browser and jQuery that the string will 
+                    continue on the next line. */
+                /* Note: Use single quotes in jQuery so as to not interfere with the 
+                    double quotes that contain the body element. */
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                                <p id='1'>Paragraph 1</p>\
+                                <p id='2'>Paragraph 2</p>\
+                                <p id='3'>Paragraph 3</p>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </body>"
+                );
+            $("#2").css({"color":"red"}); //Use # to inditcate 'id'; semicolon ends the statement
+            $('#3').click(function { /* click() method binds an event handler to the "click"
+                JavaScript event, or trigger that event on an element. */
+                $('h1')
+            });
+        }); //this is how you end the statement/function in jQuery
+    </script>
+</html>
